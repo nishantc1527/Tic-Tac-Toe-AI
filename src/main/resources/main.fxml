@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.GridPane?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.ColumnConstraints?>
+
+<?import java.lang.String?>
+<?import javafx.scene.layout.TilePane?>
+<GridPane fx:controller="main.Controller"
+          xmlns:fx="http://javafx.com/fxml">
+
+    <stylesheets>
+        <String fx:value="styles.css" />
+    </stylesheets>
+
+    <Button fx:id="button1" onAction="#buttonClicked">
+        <prefWidth>200</prefWidth>
+        <prefHeight>200</prefHeight>
+        <GridPane.rowIndex>0</GridPane.rowIndex>
+        <GridPane.columnIndex>0</GridPane.columnIndex>
+    </Button>
+    <Button fx:id="button2" onAction="#buttonClicked">
+        <prefWidth>200</prefWidth>
+        <prefHeight>200</prefHeight>
+        <GridPane.rowIndex>0</GridPane.rowIndex>
+        <GridPane.columnIndex>1</GridPane.columnIndex>
+    </Button>
+    <Button fx:id="button3" onAction="#buttonClicked">
+        <prefWidth>200</prefWidth>
+        <prefHeight>200</prefHeight>
+        <GridPane.rowIndex>0</GridPane.rowIndex>
+        <GridPane.columnIndex>2</GridPane.columnIndex>
+    </Button>
+    <Button fx:id="button4" onAction="#buttonClicked">
+        <prefWidth>200</prefWidth>
+        <prefHeight>200</prefHeight>
+        <GridPane.rowIndex>1</GridPane.rowIndex>
+        <GridPane.columnIndex>0</GridPane.columnIndex>
+    </Button>
+    <Button fx:id="button5" onAction="#buttonClicked">
+        <prefWidth>200</prefWidth>
+        <prefHeight>200</prefHeight>
+        <GridPane.rowIndex>1</GridPane.rowIndex>
+        <GridPane.columnIndex>1</GridPane.columnIndex>
+    </Button>
+    <Button fx:id="button6" onAction="#buttonClicked">
+        <prefWidth>200</prefWidth>
+        <prefHeight>200</prefHeight>
+        <GridPane.rowIndex>1</GridPane.rowIndex>
+        <GridPane.columnIndex>2</GridPane.columnIndex>
+    </Button>
+    <Button fx:id="button7" onAction="#buttonClicked">
+        <prefWidth>200</prefWidth>
+        <prefHeight>200</prefHeight>
+        <GridPane.rowIndex>2</GridPane.rowIndex>
+        <GridPane.columnIndex>0</GridPane.columnIndex>
+    </Button>
+    <Button fx:id="button8" onAction="#buttonClicked">
+        <prefWidth>200</prefWidth>
+        <prefHeight>200</prefHeight>
+        <GridPane.rowIndex>2</GridPane.rowIndex>
+        <GridPane.columnIndex>1</GridPane.columnIndex>
+    </Button>
+    <Button fx:id="button9" onAction="#buttonClicked">
+        <prefWidth>200</prefWidth>
+        <prefHeight>200</prefHeight>
+        <GridPane.rowIndex>2</GridPane.rowIndex>
+        <GridPane.columnIndex>2</GridPane.columnIndex>
+    </Button>
+</GridPane>

@@ -1,0 +1,1 @@
+Tic Tac Toe AI. The UI is made in JavaFX. The actual UI is kind of hacky and not that great. The algorithm is the minimax algorithm, which can be found in the Controller class.
