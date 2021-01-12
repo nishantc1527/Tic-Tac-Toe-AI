@@ -51,7 +51,10 @@ public class Controller {
       return;
     }
 
-    Button bestOption = minimax(buttons, o).getValue();
+    Button bestOption = minimax(buttons, o,  9).getValue(); // If you set the depth to 1, it will only see 1 move ahead.
+                                                                  // While it can block wins visible in 1 move, it can see forced
+                                                                  // wins in time. However when the depth increases, it can spot
+                                                                  // forced wins before they happen.
 
     bestOption.setText("O");
 
@@ -67,7 +70,11 @@ public class Controller {
     }
   }
 
-  private Pair<Integer, Button> minimax(Button[] buttons, boolean turn) {
+  private Pair<Integer, Button> minimax(Button[] buttons, boolean turn, int depth) {
+    if(depth <= 0) {
+      return new Pair<>(eval(), null);
+    }
+
     if (checkWin("O")) {
       return new Pair<>(1, null);
     }
@@ -87,7 +94,7 @@ public class Controller {
       for (Button button : buttons) {
         if (button.getText().equals("")) {
           button.setText("O");
-          Pair<Integer, Button> current = minimax(buttons, x);
+          Pair<Integer, Button> current = minimax(buttons, x, depth);
           button.setText("");
 
           if (current.getKey() > max) {
@@ -105,7 +112,7 @@ public class Controller {
       for (Button button : buttons) {
         if (button.getText().equals("")) {
           button.setText("X");
-          Pair<Integer, Button> current = minimax(buttons, o);
+          Pair<Integer, Button> current = minimax(buttons, o, depth - 1);
           button.setText("");
 
           if (current.getKey() < min) {
@@ -117,6 +124,18 @@ public class Controller {
 
       return new Pair<>(min, best);
     }
+  }
+
+  private int eval() {
+    if (checkWin("O")) {
+      return 1;
+    }
+
+    if (checkWin("X")) {
+      return -1;
+    }
+
+    return 0;
   }
 
   private boolean checkWin(String c) {
