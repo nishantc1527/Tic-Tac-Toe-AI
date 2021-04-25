@@ -40,13 +40,13 @@ public class Controller {
     source.setText("X");
 
     if (checkWin("X")) {
-      source.setStyle("-fx-background-color: blue;");
+      source.setStyle("-fx-background-color: green;");
       gameEnded = true;
       return;
     }
 
     if (checkTie()) {
-      source.setStyle("-fx-background-color: green;");
+      source.setStyle("-fx-background-color: grey;");
       gameEnded = true;
       return;
     }
@@ -65,7 +65,7 @@ public class Controller {
     }
 
     if (checkTie()) {
-      source.setStyle("-fx-background-color: green;");
+      source.setStyle("-fx-background-color: grey;");
       gameEnded = true;
     }
   }
